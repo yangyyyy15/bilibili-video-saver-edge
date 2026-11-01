@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilibili 下载</title>
+    <style>
+      :root { color-scheme: light; font: 14px/1.45 "Segoe UI", "Microsoft YaHei", sans-serif; }
+      body { box-sizing: border-box; width: 320px; margin: 0; padding: 16px; color: #202124; }
+      h1 { margin: 0 0 12px; font-size: 16px; font-weight: 650; }
+      #title { margin: 0 0 14px; color: #5f6368; overflow-wrap: anywhere; }
+      label { display: block; margin-bottom: 6px; font-size: 12px; color: #5f6368; }
+      select, button { box-sizing: border-box; width: 100%; min-height: 36px; font: inherit; }
+      select { padding: 0 8px; border: 1px solid #c7c9cc; border-radius: 4px; background: white; }
+      button { margin-top: 12px; border: 0; border-radius: 4px; background: #00a1d6; color: white; font-weight: 600; cursor: pointer; }
+      button:disabled { opacity: .55; cursor: wait; }
+      #status { min-height: 20px; margin: 10px 0 0; color: #5f6368; overflow-wrap: anywhere; }
+      #status.error { color: #b3261e; }
+    </style>
+  </head>
+  <body>
+    <h1>Bilibili 视频下载</h1>
+    <p id="title">正在读取当前视频…</p>
+    <label for="quality">可用清晰度</label>
+    <select id="quality" disabled></select>
+    <button id="download" type="button" disabled>下载视频</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
